@@ -21,8 +21,8 @@ const clerkWebhooks = async (req,res) => {
         switch (type) {
             case "user.created": {
                 const userData = {
-                    clerkId: data.Id,
-                    email: data.email_addresses[0].email_address,
+                    clerkId: data.id,
+                    emailId: data.email_addresses[0].email_address, 
                     firstName: data.first_name,
                     lastName: data.last_name,
                     photo: data.image_url
